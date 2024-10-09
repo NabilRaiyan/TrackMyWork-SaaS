@@ -16,3 +16,12 @@ export class AuthDto {
   @IsNotEmpty()
   lastName: string;
 }
+
+export class AuthSignInDto {
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
+
+  @IsNotEmpty()
+  password: string;
+}
