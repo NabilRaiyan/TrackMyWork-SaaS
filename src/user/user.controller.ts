@@ -9,7 +9,7 @@ export class UserController {
   getMe(@Req() req: Request) {
     console.log({
       user: req.user,
-    })
-    return 'My name is Raiyan ';
+    });
+    return req.user;
   }
 }
