@@ -14,6 +14,7 @@ export class UserController {
     return user;
   }
 
+  // update user profile
   @Post('update')
   updateProfile() {}
 }
