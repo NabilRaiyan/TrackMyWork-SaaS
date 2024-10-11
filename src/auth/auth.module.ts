@@ -5,8 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from './constants';
 import { JwtStrategy } from './strategy';
-import { PrismaService } from 'src/prisma/prisma.service';
-import { PrismaModule } from 'src/prisma/prisma.module';
+import { PrismaModule } from '../prisma/prisma.module'; // Ensure this path is correct
 
 @Module({
   imports: [
@@ -16,9 +15,9 @@ import { PrismaModule } from 'src/prisma/prisma.module';
       secret: jwtConstants.secret,
       signOptions: { expiresIn: '30m' },
     }),
-    PrismaModule,
-  ], // loading dotenv file var in our project
+    PrismaModule, // Ensure PrismaModule is correctly defined and exported
+  ],
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategy, PrismaService],
+  providers: [AuthService, JwtStrategy],
 })
 export class AuthModule {}

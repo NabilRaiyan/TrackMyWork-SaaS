@@ -1,4 +1,4 @@
-// Until 1 hr 38 min
+// Until 2 hr 35 min
 // Link: https://www.youtube.com/watch?v=GHTA143_b-s
 
 import {
@@ -6,7 +6,7 @@ import {
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { AuthDto, AuthSignInDto } from './dto';
 import * as argon from 'argon2';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
